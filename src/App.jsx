@@ -11,12 +11,12 @@ function App() {
   const [contacts, setContacts] = useState([]);
  
   function search () {
-// players = contacts.filter((contact) => {contact.name.includes(searchid.char)
-// console.log(players);
-// })
+players = contacts.filter((contact) => {contact.name.includes(searchid.char)
+console.log(players);
+})
   }
   const removePlayer = async (playerId) => {
-    event.preventDefault();
+    
     try {
         //console.log(playerId);
         const response = await fetch(`https://fsa-puppy-bowl.herokuapp.com/api/2109-UNF-HY-WEB-PT/players/${id.delete}`, {
@@ -41,7 +41,7 @@ function App() {
 
   }
   async function handleSubmitt(event) {
-    event.preventDefault();
+  
     console.log("Hello ");
     try {
       const response = await fetch("https://fsa-puppy-bowl.herokuapp.com/api/2109-UNF-HY-WEB-PT/players", {
@@ -64,7 +64,7 @@ function App() {
   async function data(){
   useEffect(() => {
   async function readobject () {
-    event.preventDefault();
+  
     try{
     const response = await fetch('https://fsa-puppy-bowl.herokuapp.com/api/2109-UNF-HY-WEB-PT/players');
     
